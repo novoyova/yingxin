@@ -19,6 +19,9 @@ class App extends StatelessWidget {
         primaryColor: AppColors.primary,
         dividerColor: AppColors.borderLight,
         scaffoldBackgroundColor: AppColors.backgroundLight,
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: AppColors.backgroundLight,
+        ),
         textTheme: AppTextTheme.lightTextTheme,
         buttonTheme: ButtonThemeData(buttonColor: AppColors.primaryButtonLight),
         textSelectionTheme: const TextSelectionThemeData(
@@ -32,27 +35,6 @@ class App extends StatelessWidget {
           centerTitle: true,
           titleTextStyle: AppTextTheme.lightTextTheme.headlineLarge?.copyWith(
             color: AppColors.primaryTextLight,
-          ),
-        ),
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: AppColors.primary,
-        dividerColor: AppColors.borderDark,
-        scaffoldBackgroundColor: AppColors.backgroundDark,
-        textTheme: AppTextTheme.darkTextTheme,
-        buttonTheme: ButtonThemeData(buttonColor: AppColors.primaryButtonDark),
-        textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: AppColors.primary,
-          selectionColor: AppColors.accent,
-          selectionHandleColor: AppColors.primary,
-        ),
-        appBarTheme: AppBarTheme(
-          elevation: 0,
-          backgroundColor: AppColors.primary,
-          centerTitle: true,
-          titleTextStyle: AppTextTheme.darkTextTheme.headlineLarge?.copyWith(
-            color: AppColors.primaryTextDark,
           ),
         ),
       ),
