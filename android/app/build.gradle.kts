@@ -18,6 +18,12 @@ val localProperties = Properties().apply {
 val flutterMinSdkVersion = localProperties["flutter.minSdkVersion"]?.toString()?.toInt() ?: flutter.minSdkVersion
 val flutterNdkVersion = localProperties["flutter.ndkVersion"]?.toString() ?: flutter.ndkVersion
 
+val keystoreProperties = Properties()
+val keystorePropertiesFile = rootProject.file("key.properties")
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(keystorePropertiesFile.inputStream())
+}
+
 android {
     namespace = "com.novoyova.yuanrung"
     compileSdk = flutter.compileSdkVersion
@@ -47,11 +53,18 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+            storeFile = keystoreProperties["storeFile"]?.let { file(it as String) }
+            storePassword = keystoreProperties["storePassword"] as String
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 }
