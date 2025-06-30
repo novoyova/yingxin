@@ -49,6 +49,7 @@ class _NursingAssessmentBottomSheetState
     extends State<NursingAssessmentBottomSheet> {
   late final TextEditingController _originalNoteController;
   late final TextEditingController _correctedNoteController;
+  late final TextEditingController _formattedNoteController;
 
   late final NursingAssessmentCubit _nursingAssessmentCubit;
   late final bool _isUpdate;
@@ -60,6 +61,7 @@ class _NursingAssessmentBottomSheetState
     super.initState();
     _originalNoteController = TextEditingController();
     _correctedNoteController = TextEditingController();
+    _formattedNoteController = TextEditingController();
     _nursingAssessmentCubit = context.read<NursingAssessmentCubit>();
     _isUpdate = _nursingAssessmentCubit.state.currentNursingAssessment != null;
     if (_isUpdate) {
@@ -67,6 +69,8 @@ class _NursingAssessmentBottomSheetState
           _nursingAssessmentCubit.state.currentNursingAssessment!.originalNote;
       _correctedNoteController.text =
           _nursingAssessmentCubit.state.currentNursingAssessment!.correctedNote;
+      _formattedNoteController.text =
+          _nursingAssessmentCubit.state.currentNursingAssessment!.formattedNote;
     }
   }
 
@@ -118,6 +122,8 @@ class _NursingAssessmentBottomSheetState
                     state.currentNursingAssessment!.originalNote;
                 _correctedNoteController.text =
                     state.currentNursingAssessment!.note;
+                _formattedNoteController.text =
+                    state.currentNursingAssessment!.formattedNote;
               });
             }
           },
@@ -185,7 +191,33 @@ class _NursingAssessmentBottomSheetState
                   ),
                   TextField(
                     controller: _correctedNoteController,
-                    maxLines: 4,
+                    maxLines: 2,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: AppColors.gray),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: AppColors.primary),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              // Formatted Recognition Result
+              Column(
+                spacing: 5,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppStrings.nursingAssessmentBottomFormattedTextFieldLabel,
+                    style: _textTheme.bodyLarge,
+                  ),
+                  TextField(
+                    controller: _formattedNoteController,
+                    maxLines: 2,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -240,7 +272,7 @@ class _NursingAssessmentBottomSheetState
                                 overlayColor: Colors.transparent,
                                 backgroundColor:
                                     audioRecorderState.isRecording
-                                        ? null
+                                        ? AppColors.white
                                         : AppColors.accent,
                                 side:
                                     audioRecorderState.isRecording
@@ -314,9 +346,11 @@ class _NursingAssessmentBottomSheetState
                           final nursingAssessment =
                               state.currentNursingAssessment!;
 
-                          // Do nothing if the corrected note is the same
+                          // Do nothing if the corrected note and formatted note is the same
                           if (_correctedNoteController.text ==
-                              nursingAssessment.correctedNote) {
+                                  nursingAssessment.correctedNote &&
+                              _formattedNoteController.text ==
+                                  nursingAssessment.formattedNote) {
                             return;
                           }
 
@@ -329,6 +363,8 @@ class _NursingAssessmentBottomSheetState
                                     .copyWith(
                                       correctedNote:
                                           _correctedNoteController.text,
+                                      formattedNote:
+                                          _formattedNoteController.text,
                                     ),
                                 isUpdate: _isUpdate,
                               );
@@ -407,6 +443,7 @@ class _NursingAssessmentBottomSheetState
   void dispose() {
     _originalNoteController.dispose();
     _correctedNoteController.dispose();
+    _formattedNoteController.dispose();
     super.dispose();
   }
 }

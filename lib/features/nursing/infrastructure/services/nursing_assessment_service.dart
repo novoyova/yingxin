@@ -137,4 +137,30 @@ final class NursingAssessmentService {
       return false;
     }
   }
+
+  Future<String> formatNursingNote({required String note}) async {
+    final url = '$_baseUrl/note';
+
+    try {
+      final response = await _dio.post(
+        url,
+        options: Options(
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+        ),
+        data: {'note': note},
+      );
+
+      final data = response.data;
+      log('formatNursingNote => data: $data', name: className);
+      if (data['status'] == 'success' && data['transformed_note'] != null) {
+        return data['transformed_note'];
+      }
+      return "";
+    } on DioException catch (e, stack) {
+      log('createNursingAssessment => error: $e', name: className);
+      AppCrashlytics.recordError(e, stack);
+      return "";
+    }
+  }
 }

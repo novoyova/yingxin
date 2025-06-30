@@ -28,6 +28,7 @@ abstract final class AppStrings {
   static const nursingAssessmentBottomTitle = '編輯歷程記錄 ';
   static const nursingAssessmentBottomNoteTextFieldLabel = '辨識結果 ';
   static const nursingAssessmentBottomCorrectedTextFieldLabel = '修正辨識結果 ';
+  static const nursingAssessmentBottomFormattedTextFieldLabel = '護理記錄';
   static const nursingAssessmentBottomButtonSave = '儲存';
   static const nursingAssessmentBottomButtonCancel = '取消';
   static const nursingAssessmentBottomButtonSpeechStart = '開始錄音';

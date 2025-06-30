@@ -3,6 +3,7 @@ final class NursingAssessment {
   final DateTime date;
   final String originalNote;
   final String correctedNote;
+  final String formattedNote;
   final String? audioFilename;
 
   NursingAssessment({
@@ -10,6 +11,7 @@ final class NursingAssessment {
     required this.date,
     required this.originalNote,
     this.correctedNote = "",
+    this.formattedNote = "",
     this.audioFilename,
   });
 
@@ -18,6 +20,7 @@ final class NursingAssessment {
     DateTime? date,
     String? originalNote,
     String? correctedNote,
+    String? formattedNote,
     String? audioFilename,
   }) {
     return NursingAssessment(
@@ -25,20 +28,27 @@ final class NursingAssessment {
       date: date ?? this.date,
       originalNote: originalNote ?? this.originalNote,
       correctedNote: correctedNote ?? this.correctedNote,
+      formattedNote: formattedNote ?? this.formattedNote,
       audioFilename: audioFilename ?? this.audioFilename,
     );
   }
 
-  String get note => correctedNote.isNotEmpty ? correctedNote : originalNote;
+  String get note =>
+      correctedNote.isNotEmpty
+          ? correctedNote
+          : formattedNote.isNotEmpty
+          ? formattedNote
+          : originalNote;
 
   @override
   String toString() {
     return '''NursingAssessment(
-      id: $id, 
-      date: $date, 
-      originalNote: $originalNote, 
-      correctedNote: $correctedNote, 
-      audioFilename: $audioFilename
+      id: $id,
+      date: $date,
+      originalNote: $originalNote,
+      correctedNote: $correctedNote,
+      formattedNote: $formattedNote,
+      audioFilename: $audioFilename,
     )''';
   }
 }

@@ -15,6 +15,7 @@ abstract final class NursingAssessmentDTO {
       date: date,
       originalNote: data['recognitionResult'],
       correctedNote: data['correctedRecognitionResult'] ?? '',
+      formattedNote: data['nursingNote'] ?? '',
       audioFilename: data['filename'],
     );
   }
@@ -29,6 +30,7 @@ abstract final class NursingAssessmentDTO {
         'data': {
           'recognitionResult': nursingAssessment.originalNote,
           'correctedRecognitionResult': nursingAssessment.correctedNote,
+          'nursingNote': nursingAssessment.formattedNote,
           'time': nursingAssessment.date.toUtc().toIso8601String(),
         },
       };
@@ -38,6 +40,7 @@ abstract final class NursingAssessmentDTO {
       'filename': nursingAssessment.audioFilename,
       'recognitionResult': nursingAssessment.originalNote,
       'correctedRecognitionResult': nursingAssessment.correctedNote,
+      'nursingNote': nursingAssessment.formattedNote,
       'time': nursingAssessment.date.toUtc().toIso8601String(),
     };
   }

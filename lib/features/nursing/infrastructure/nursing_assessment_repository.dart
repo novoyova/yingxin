@@ -36,6 +36,10 @@ final class NursingAssessmentRepository {
 
     final data = await _speechToTextService.transcribeAudio(base64Audio);
     if (data != null) {
+      final nursingNote = await _nursingAssessmentService.formatNursingNote(
+        note: data['recognitionResult'],
+      );
+      data['nursingNote'] = nursingNote;
       final nursingAssessment = NursingAssessmentDTO.mi2sToDomain(data);
       return Result.success(nursingAssessment);
     }
