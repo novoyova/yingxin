@@ -14,7 +14,8 @@ abstract final class NursingAssessmentDTO {
       id: data['filename'],
       date: date,
       originalNote: data['recognitionResult'],
-      correctedNote: data['correctedRecognitionResult'] ?? '',
+      correctedNote:
+          data['correctedRecognitionResult'] ?? data['recognitionResult'],
       formattedNote: data['nursingNote'] ?? '',
       audioFilename: data['filename'],
     );

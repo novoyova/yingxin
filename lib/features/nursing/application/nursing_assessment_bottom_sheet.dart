@@ -121,7 +121,7 @@ class _NursingAssessmentBottomSheetState
                 _originalNoteController.text =
                     state.currentNursingAssessment!.originalNote;
                 _correctedNoteController.text =
-                    state.currentNursingAssessment!.note;
+                    state.currentNursingAssessment!.correctedNote;
                 _formattedNoteController.text =
                     state.currentNursingAssessment!.formattedNote;
               });
