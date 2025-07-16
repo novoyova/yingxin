@@ -272,7 +272,7 @@ class _NursingAssessmentBottomSheetState
                                 overlayColor: Colors.transparent,
                                 backgroundColor:
                                     audioRecorderState.isRecording
-                                        ? AppColors.white
+                                        ? Colors.transparent
                                         : AppColors.accent,
                                 side:
                                     audioRecorderState.isRecording
@@ -346,26 +346,14 @@ class _NursingAssessmentBottomSheetState
                           final nursingAssessment =
                               state.currentNursingAssessment!;
 
-                          // Do nothing if the corrected note and formatted note is the same
-                          if (_correctedNoteController.text ==
-                                  nursingAssessment.correctedNote &&
-                              _formattedNoteController.text ==
-                                  nursingAssessment.formattedNote) {
-                            return;
-                          }
-
                           // Save Nursing Assessment
                           context
                               .read<NursingAssessmentCubit>()
                               .saveNursingAssessment(
-                                nursingAssessment: state
-                                    .currentNursingAssessment!
-                                    .copyWith(
-                                      correctedNote:
-                                          _correctedNoteController.text,
-                                      formattedNote:
-                                          _formattedNoteController.text,
-                                    ),
+                                nursingAssessment: nursingAssessment.copyWith(
+                                  correctedNote: _correctedNoteController.text,
+                                  formattedNote: _formattedNoteController.text,
+                                ),
                                 isUpdate: _isUpdate,
                               );
                         },
