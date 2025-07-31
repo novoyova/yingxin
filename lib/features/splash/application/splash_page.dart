@@ -30,7 +30,7 @@ class _SplashPageView extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: AppColors.white,
       body: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) {
           if (state.isSuccess) {
@@ -47,13 +47,13 @@ class _SplashPageView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Logo
-              Image.asset(AppAssets.logoIconImage, width: 300),
+              Image.asset(AppAssets.logoIconImage),
 
               // Title
               Text(
                 AppStrings.splashTitle,
                 textAlign: TextAlign.center,
-                style: textTheme.displayMedium?.copyWith(
+                style: textTheme.headlineLarge?.copyWith(
                   color: AppColors.primaryTextLight,
                   fontWeight: FontWeight.normal,
                 ),

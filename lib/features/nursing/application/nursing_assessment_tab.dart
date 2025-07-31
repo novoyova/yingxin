@@ -148,7 +148,7 @@ class _NursingAssessmentTabView extends StatelessWidget {
         elevation: 2,
         backgroundColor: AppColors.primary,
         shape: CircleBorder(),
-        child: Icon(Icons.add_rounded, color: AppColors.primaryTextLight),
+        child: Icon(Icons.add_rounded, color: AppColors.white),
       ),
     );
   }

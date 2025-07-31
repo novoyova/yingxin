@@ -37,7 +37,7 @@ class _HomePageView extends StatelessWidget {
           children: [
             Icon(
               Icons.account_circle_rounded,
-              color: AppColors.primaryTextLight,
+              color: AppColors.white,
               size: 32,
             ),
 
@@ -48,7 +48,9 @@ class _HomePageView extends StatelessWidget {
                     state.userId,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: textTheme.displaySmall,
+                    style: textTheme.displaySmall?.copyWith(
+                      color: AppColors.white,
+                    ),
                   ),
                 );
               },
@@ -75,7 +77,7 @@ class _HomePageView extends StatelessWidget {
                 onPressed: () => homeCubit.signOut(),
                 icon: Icon(
                   Icons.exit_to_app_rounded,
-                  color: AppColors.primaryTextLight,
+                  color: AppColors.white,
                   size: 32,
                 ),
               );

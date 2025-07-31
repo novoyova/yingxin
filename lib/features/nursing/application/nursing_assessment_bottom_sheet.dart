@@ -273,10 +273,10 @@ class _NursingAssessmentBottomSheetState
                                 backgroundColor:
                                     audioRecorderState.isRecording
                                         ? Colors.transparent
-                                        : AppColors.accent,
+                                        : AppColors.primary,
                                 side:
                                     audioRecorderState.isRecording
-                                        ? BorderSide(color: AppColors.accent)
+                                        ? BorderSide(color: AppColors.primary)
                                         : null,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
@@ -303,7 +303,7 @@ class _NursingAssessmentBottomSheetState
                                         size: 48,
                                         color:
                                             audioRecorderState.isRecording
-                                                ? AppColors.accent
+                                                ? AppColors.primary
                                                 : AppColors.white,
                                       ),
                                   Text(
@@ -318,7 +318,7 @@ class _NursingAssessmentBottomSheetState
                                     style: _textTheme.bodyLarge?.copyWith(
                                       color:
                                           audioRecorderState.isRecording
-                                              ? AppColors.accent
+                                              ? AppColors.primary
                                               : AppColors.white,
                                     ),
                                   ),
@@ -360,7 +360,7 @@ class _NursingAssessmentBottomSheetState
                         style: ElevatedButton.styleFrom(
                           elevation: 0,
                           fixedSize: const Size(double.maxFinite, 40),
-                          backgroundColor: AppColors.accent,
+                          backgroundColor: AppColors.primary,
                           shape: StadiumBorder(),
                         ),
                         child:
@@ -410,7 +410,7 @@ class _NursingAssessmentBottomSheetState
                             child: Text(
                               AppStrings.nursingAssessmentBottomButtonCancel,
                               style: _textTheme.bodyLarge?.copyWith(
-                                color: AppColors.accent,
+                                color: AppColors.primary,
                               ),
                             ),
                           );

@@ -52,6 +52,7 @@ class _AuthPageViewState extends State<_AuthPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       body: BlocListener<AuthCubit, AuthState>(
         listener: (context, state) {
           if (state.isSuccess) {
@@ -62,17 +63,14 @@ class _AuthPageViewState extends State<_AuthPageView> {
           padding: const EdgeInsets.all(40),
           alignment: Alignment.center,
           child: Column(
+            spacing: 10,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Logo
-              Image.asset(AppAssets.logoTextImage, width: 250),
-
-              const SizedBox(height: 5),
+              Image.asset(AppAssets.logoTextImage),
 
               // Title
               Text(AppStrings.authTitle, style: _textTheme.headlineSmall),
-
-              const SizedBox(height: 15),
 
               // User ID TextField
               Column(
@@ -116,8 +114,6 @@ class _AuthPageViewState extends State<_AuthPageView> {
                   ),
                 ],
               ),
-
-              const SizedBox(height: 10),
 
               // Login Button
               BlocBuilder<AuthCubit, AuthState>(

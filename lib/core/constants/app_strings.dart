@@ -1,8 +1,8 @@
 abstract final class AppStrings {
-  static const appName = 'YuanRung';
+  static const appName = 'YingXin';
 
   // Splash
-  static const splashTitle = '員榮醫院\n護理紀錄輔助系統';
+  static const splashTitle = '營新醫院\n護理紀錄輔助系統';
 
   // Auth
   static const authTitle = '護理師登入';

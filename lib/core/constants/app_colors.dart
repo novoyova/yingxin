@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 
 abstract final class AppColors {
   // Main Colors
-  static const Color primary = Color(0xFFF5AB1A);
-  static const Color accent = Color(0xFFF08200);
+  // 0xFF008EDB
+  // 0xFF8BC21E
+  // 0xFF0A913F
+  // 0xFF1C4279
+  static const Color primary = Color(0xFF0A913F);
+  static const Color accent = Color(0xFF8BC21E);
   static const Color success = Color(0xFF388E3C);
   static const Color error = Color(0xFFD32F2F);
   static const Color warning = Color(0xFFFF9800);
