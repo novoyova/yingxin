@@ -63,14 +63,15 @@ class _AuthPageViewState extends State<_AuthPageView> {
           padding: const EdgeInsets.all(40),
           alignment: Alignment.center,
           child: Column(
-            spacing: 10,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Logo
-              Image.asset(AppAssets.logoTextImage),
+              Image.asset(AppAssets.logoTextImage, width: 300),
 
               // Title
               Text(AppStrings.authTitle, style: _textTheme.headlineSmall),
+
+              const SizedBox(height: 10),
 
               // User ID TextField
               Column(
@@ -114,6 +115,8 @@ class _AuthPageViewState extends State<_AuthPageView> {
                   ),
                 ],
               ),
+
+              const SizedBox(height: 10),
 
               // Login Button
               BlocBuilder<AuthCubit, AuthState>(

@@ -43,17 +43,16 @@ class _SplashPageView extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(20),
           child: Column(
-            spacing: 20,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Logo
-              Image.asset(AppAssets.logoIconImage),
+              Image.asset(AppAssets.logoIconImage, width: 250),
 
               // Title
               Text(
                 AppStrings.splashTitle,
                 textAlign: TextAlign.center,
-                style: textTheme.headlineLarge?.copyWith(
+                style: textTheme.displayMedium?.copyWith(
                   color: AppColors.primaryTextLight,
                   fontWeight: FontWeight.normal,
                 ),
@@ -63,7 +62,10 @@ class _SplashPageView extends StatelessWidget {
               BlocBuilder<SplashCubit, SplashState>(
                 builder: (context, state) {
                   if (state.isLoading) {
-                    return CircularProgressIndicator(color: AppColors.accent);
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 40.0),
+                      child: CircularProgressIndicator(color: AppColors.accent),
+                    );
                   }
                   return const SizedBox.shrink();
                 },
