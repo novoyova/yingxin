@@ -44,5 +44,5 @@ app.*.map.json
 /android/app/release
 
 # Flutterfire related
-/lib/core/config/firebase_options.dart
+/lib/core/configs/firebase_options.dart
 firebase.json
