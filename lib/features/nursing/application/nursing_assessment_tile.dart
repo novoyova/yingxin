@@ -159,7 +159,7 @@ class _NursingAssessmentTileView extends StatelessWidget {
         contentPadding: EdgeInsets.zero,
         visualDensity: VisualDensity.compact,
         leading: SizedBox(
-          width: 70,
+          width: 78,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
