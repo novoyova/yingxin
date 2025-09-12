@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/features/nursing/application/cubits/nursing_assessment_tile_state.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment.dart';
-import 'package:yuanrung/features/nursing/infrastructure/nursing_assessment_repository.dart';
+import 'package:yingxin/features/nursing/application/cubits/nursing_assessment_tile_state.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment.dart';
+import 'package:yingxin/features/nursing/infrastructure/nursing_assessment_repository.dart';
 
 class NursingAssessmentTileCubit extends Cubit<NursingAssessmentTileState> {
   static const String className = 'NursingAssessmentTileCubit';

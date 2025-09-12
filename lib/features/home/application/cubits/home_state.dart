@@ -1,4 +1,4 @@
-import 'package:yuanrung/features/home/domain/home_failure.dart';
+import 'package:yingxin/features/home/domain/home_failure.dart';
 
 final class HomeState {
   final String userId;

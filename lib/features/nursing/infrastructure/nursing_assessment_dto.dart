@@ -1,4 +1,4 @@
-import 'package:yuanrung/features/nursing/domain/nursing_assessment.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment.dart';
 
 abstract final class NursingAssessmentDTO {
   static NursingAssessment mi2sToDomain(Map<String, dynamic> data) {

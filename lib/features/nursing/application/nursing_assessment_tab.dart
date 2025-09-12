@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/core/constants/app_colors.dart';
-import 'package:yuanrung/core/constants/app_strings.dart';
-import 'package:yuanrung/core/integrations/service_locator.dart';
-import 'package:yuanrung/features/nursing/application/cubits/nursing_assessment_cubit.dart';
-import 'package:yuanrung/features/nursing/application/cubits/nursing_assessment_state.dart';
-import 'package:yuanrung/features/nursing/application/nursing_assessment_bottom_sheet.dart';
-import 'package:yuanrung/features/nursing/application/nursing_assessment_tile.dart';
+import 'package:yingxin/core/constants/app_colors.dart';
+import 'package:yingxin/core/constants/app_strings.dart';
+import 'package:yingxin/core/integrations/service_locator.dart';
+import 'package:yingxin/features/nursing/application/cubits/nursing_assessment_cubit.dart';
+import 'package:yingxin/features/nursing/application/cubits/nursing_assessment_state.dart';
+import 'package:yingxin/features/nursing/application/nursing_assessment_bottom_sheet.dart';
+import 'package:yingxin/features/nursing/application/nursing_assessment_tile.dart';
 
 class NursingAssessmentTab extends StatelessWidget {
   static const String className = 'NursingAssessmentTab';

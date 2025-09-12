@@ -1,4 +1,4 @@
-import 'package:yuanrung/features/nursing/domain/nursing_assessment_failure.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment_failure.dart';
 
 final class NursingAssessmentTileState {
   static const String className = 'NursingAssessmentTileState';

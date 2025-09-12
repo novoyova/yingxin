@@ -1,5 +1,5 @@
-import 'package:yuanrung/core/integrations/app_crashlytics.dart';
-import 'package:yuanrung/core/integrations/storage_service.dart';
+import 'package:yingxin/core/integrations/app_crashlytics.dart';
+import 'package:yingxin/core/integrations/storage_service.dart';
 
 final class AuthRepository {
   static const String className = 'AuthRepository';

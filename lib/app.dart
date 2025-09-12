@@ -1,10 +1,10 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:yuanrung/core/constants/app_colors.dart';
-import 'package:yuanrung/core/constants/app_strings.dart';
-import 'package:yuanrung/core/router/app_router.dart';
-import 'package:yuanrung/core/themes/app_text_theme.dart';
+import 'package:yingxin/core/constants/app_colors.dart';
+import 'package:yingxin/core/constants/app_strings.dart';
+import 'package:yingxin/core/router/app_router.dart';
+import 'package:yingxin/core/themes/app_text_theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

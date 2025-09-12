@@ -2,8 +2,8 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:yuanrung/core/constants/app_assets.dart';
-import 'package:yuanrung/core/integrations/app_crashlytics.dart';
+import 'package:yingxin/core/constants/app_assets.dart';
+import 'package:yingxin/core/integrations/app_crashlytics.dart';
 
 final class SpeechToTextService {
   static const String className = 'SpeechToTextService';

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:yuanrung/features/nursing/application/cubits/audio_player_state.dart';
+import 'package:yingxin/features/nursing/application/cubits/audio_player_state.dart';
 
 class AudioPlayerCubit extends Cubit<AudioPlayerState> {
   static const String className = 'AudioPlayerCubit';

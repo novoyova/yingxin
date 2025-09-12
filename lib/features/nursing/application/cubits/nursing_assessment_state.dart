@@ -1,5 +1,5 @@
-import 'package:yuanrung/features/nursing/domain/nursing_assessment.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment_failure.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment_failure.dart';
 
 final class NursingAssessmentState {
   final List<NursingAssessment> nursingAssessments;

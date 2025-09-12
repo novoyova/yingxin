@@ -1,9 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:yuanrung/features/auth/application/auth_page.dart';
-import 'package:yuanrung/features/home/application/home_page.dart';
-import 'package:yuanrung/features/splash/application/splash_page.dart';
+import 'package:yingxin/features/auth/application/auth_page.dart';
+import 'package:yingxin/features/home/application/home_page.dart';
+import 'package:yingxin/features/splash/application/splash_page.dart';
 
 abstract final class AppRouter {
   static const String className = 'AppRouter';

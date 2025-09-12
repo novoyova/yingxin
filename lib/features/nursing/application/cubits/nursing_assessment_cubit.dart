@@ -1,11 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/core/utils/result.dart';
-import 'package:yuanrung/features/nursing/application/cubits/nursing_assessment_state.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment_failure.dart';
-import 'package:yuanrung/features/nursing/infrastructure/nursing_assessment_repository.dart';
+import 'package:yingxin/core/utils/result.dart';
+import 'package:yingxin/features/nursing/application/cubits/nursing_assessment_state.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment_failure.dart';
+import 'package:yingxin/features/nursing/infrastructure/nursing_assessment_repository.dart';
 
 class NursingAssessmentCubit extends Cubit<NursingAssessmentState> {
   static const String className = "NursingAssessmentCubit";

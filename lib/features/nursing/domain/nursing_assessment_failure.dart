@@ -1,4 +1,4 @@
-import 'package:yuanrung/core/contracts/failure.dart';
+import 'package:yingxin/core/contracts/failure.dart';
 
 enum NursingAssessmentFailureType {
   transcribeAudioFailed,

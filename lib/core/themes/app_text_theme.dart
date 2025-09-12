@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yuanrung/core/constants/app_colors.dart';
+import 'package:yingxin/core/constants/app_colors.dart';
 
 abstract final class AppTextTheme {
   static const TextTheme lightTextTheme = TextTheme(

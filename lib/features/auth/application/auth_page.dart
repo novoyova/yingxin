@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/core/constants/app_assets.dart';
-import 'package:yuanrung/core/constants/app_colors.dart';
-import 'package:yuanrung/core/constants/app_strings.dart';
-import 'package:yuanrung/core/integrations/service_locator.dart';
-import 'package:yuanrung/features/auth/application/cubits/auth_cubit.dart';
-import 'package:yuanrung/features/auth/application/cubits/auth_state.dart';
-import 'package:yuanrung/features/home/application/home_page.dart';
+import 'package:yingxin/core/constants/app_assets.dart';
+import 'package:yingxin/core/constants/app_colors.dart';
+import 'package:yingxin/core/constants/app_strings.dart';
+import 'package:yingxin/core/integrations/service_locator.dart';
+import 'package:yingxin/features/auth/application/cubits/auth_cubit.dart';
+import 'package:yingxin/features/auth/application/cubits/auth_state.dart';
+import 'package:yingxin/features/home/application/home_page.dart';
 
 class AuthPage extends StatelessWidget {
   static const String className = 'AuthPage';

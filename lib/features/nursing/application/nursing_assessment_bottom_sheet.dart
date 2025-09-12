@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/core/constants/app_colors.dart';
-import 'package:yuanrung/core/constants/app_strings.dart';
-import 'package:yuanrung/core/integrations/service_locator.dart';
-import 'package:yuanrung/core/utils/app_snackbar.dart';
-import 'package:yuanrung/features/nursing/application/cubits/audio_player_cubit.dart';
-import 'package:yuanrung/features/nursing/application/cubits/audio_recorder_cubit.dart';
-import 'package:yuanrung/features/nursing/application/cubits/audio_recorder_state.dart';
-import 'package:yuanrung/features/nursing/application/cubits/nursing_assessment_cubit.dart';
-import 'package:yuanrung/features/nursing/application/cubits/nursing_assessment_state.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment_failure.dart';
+import 'package:yingxin/core/constants/app_colors.dart';
+import 'package:yingxin/core/constants/app_strings.dart';
+import 'package:yingxin/core/integrations/service_locator.dart';
+import 'package:yingxin/core/utils/app_snackbar.dart';
+import 'package:yingxin/features/nursing/application/cubits/audio_player_cubit.dart';
+import 'package:yingxin/features/nursing/application/cubits/audio_recorder_cubit.dart';
+import 'package:yingxin/features/nursing/application/cubits/audio_recorder_state.dart';
+import 'package:yingxin/features/nursing/application/cubits/nursing_assessment_cubit.dart';
+import 'package:yingxin/features/nursing/application/cubits/nursing_assessment_state.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment_failure.dart';
 
 class NursingAssessmentBottomSheet extends StatefulWidget {
   static const String className = 'NursingAssessmentBottomSheet';

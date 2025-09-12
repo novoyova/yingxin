@@ -2,13 +2,13 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:yuanrung/core/integrations/storage_service.dart';
-import 'package:yuanrung/core/utils/result.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment.dart';
-import 'package:yuanrung/features/nursing/domain/nursing_assessment_failure.dart';
-import 'package:yuanrung/features/nursing/infrastructure/nursing_assessment_dto.dart';
-import 'package:yuanrung/features/nursing/infrastructure/services/nursing_assessment_service.dart';
-import 'package:yuanrung/features/nursing/infrastructure/services/speech_to_text_service.dart';
+import 'package:yingxin/core/integrations/storage_service.dart';
+import 'package:yingxin/core/utils/result.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment.dart';
+import 'package:yingxin/features/nursing/domain/nursing_assessment_failure.dart';
+import 'package:yingxin/features/nursing/infrastructure/nursing_assessment_dto.dart';
+import 'package:yingxin/features/nursing/infrastructure/services/nursing_assessment_service.dart';
+import 'package:yingxin/features/nursing/infrastructure/services/speech_to_text_service.dart';
 
 final class NursingAssessmentRepository {
   static const String className = 'NursingAssessmentRepository';

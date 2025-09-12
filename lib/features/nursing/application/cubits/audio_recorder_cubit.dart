@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:record/record.dart';
-import 'package:yuanrung/core/constants/app_assets.dart';
-import 'package:yuanrung/features/nursing/application/cubits/audio_recorder_state.dart';
+import 'package:yingxin/core/constants/app_assets.dart';
+import 'package:yingxin/features/nursing/application/cubits/audio_recorder_state.dart';
 
 class AudioRecorderCubit extends Cubit<AudioRecorderState> {
   static const String className = 'AudioRecorderCubit';

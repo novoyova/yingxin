@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/features/auth/infrastructure/auth_repository.dart';
-import 'package:yuanrung/features/splash/application/cubits/splash_state.dart';
+import 'package:yingxin/features/auth/infrastructure/auth_repository.dart';
+import 'package:yingxin/features/splash/application/cubits/splash_state.dart';
 
 final class SplashCubit extends Cubit<SplashState> {
   static const String className = 'SplashCubit';

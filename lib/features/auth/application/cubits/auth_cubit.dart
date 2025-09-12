@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/features/auth/application/cubits/auth_state.dart';
-import 'package:yuanrung/features/auth/infrastructure/auth_repository.dart';
+import 'package:yingxin/features/auth/application/cubits/auth_state.dart';
+import 'package:yingxin/features/auth/infrastructure/auth_repository.dart';
 
 final class AuthCubit extends Cubit<AuthState> {
   static const String className = 'AuthCubit';

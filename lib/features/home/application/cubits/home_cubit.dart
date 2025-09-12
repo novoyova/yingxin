@@ -1,9 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/features/auth/infrastructure/auth_repository.dart';
-import 'package:yuanrung/features/home/application/cubits/home_state.dart';
-import 'package:yuanrung/features/home/domain/home_failure.dart';
+import 'package:yingxin/features/auth/infrastructure/auth_repository.dart';
+import 'package:yingxin/features/home/application/cubits/home_state.dart';
+import 'package:yingxin/features/home/domain/home_failure.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   static const String className = 'HomeCubit';

@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:yuanrung/core/integrations/app_crashlytics.dart';
+import 'package:yingxin/core/integrations/app_crashlytics.dart';
 
 final class NursingAssessmentService {
   static const String className = 'NursingAssessmentService';

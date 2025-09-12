@@ -25,7 +25,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.novoyova.yuanrung"
+    namespace = "com.novoyova.yingxin"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutterNdkVersion
 
@@ -40,7 +40,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.novoyova.yuanrung"
+        applicationId = "com.novoyova.yingxin"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutterMinSdkVersion

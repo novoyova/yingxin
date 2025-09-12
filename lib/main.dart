@@ -3,10 +3,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:yuanrung/app.dart';
-import 'package:yuanrung/core/configs/firebase_options.dart';
-import 'package:yuanrung/core/integrations/app_crashlytics.dart';
-import 'package:yuanrung/core/integrations/service_locator.dart';
+import 'package:yingxin/app.dart';
+import 'package:yingxin/core/configs/firebase_options.dart';
+import 'package:yingxin/core/integrations/app_crashlytics.dart';
+import 'package:yingxin/core/integrations/service_locator.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 Future<void> main() async {

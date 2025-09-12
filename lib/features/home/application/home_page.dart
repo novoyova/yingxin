@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yuanrung/core/constants/app_colors.dart';
-import 'package:yuanrung/core/integrations/service_locator.dart';
-import 'package:yuanrung/features/auth/application/auth_page.dart';
-import 'package:yuanrung/features/home/application/cubits/home_cubit.dart';
-import 'package:yuanrung/features/home/application/cubits/home_state.dart';
-import 'package:yuanrung/features/home/domain/home_failure.dart';
-import 'package:yuanrung/features/nursing/application/nursing_assessment_tab.dart';
+import 'package:yingxin/core/constants/app_colors.dart';
+import 'package:yingxin/core/integrations/service_locator.dart';
+import 'package:yingxin/features/auth/application/auth_page.dart';
+import 'package:yingxin/features/home/application/cubits/home_cubit.dart';
+import 'package:yingxin/features/home/application/cubits/home_state.dart';
+import 'package:yingxin/features/home/domain/home_failure.dart';
+import 'package:yingxin/features/nursing/application/nursing_assessment_tab.dart';
 
 class HomePage extends StatelessWidget {
   static const String className = 'HomePage';
