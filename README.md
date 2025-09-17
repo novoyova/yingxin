@@ -1,16 +1,70 @@
-# yingxin
+# 營新 App
 
-A new Flutter project.
+## Setup
 
-## Getting Started
+###	Firebase Project
 
-This project is a starting point for a Flutter application.
+1. Install [Firebase CLI](https://firebase.google.com/docs/cli)
 
-A few resources to get you started if this is your first Flutter project:
+2. Configure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    ```bash
+    flutterfire configure
+    ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Move `lib/firebase_options.dart` file to `lib/core/configs/` folder
+
+### Android
+
+1. Add in `android/local.properties` file
+
+    ```bash
+    flutter.minSdkVersion=23
+    flutter.ndkVersion=27.0.12077973
+    ```
+
+2. Create `upload-keystore.jks` and put it in `android/app/` folder
+
+    ```bash
+    # macOS or Linux
+    keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA \
+            -keysize 2048 -validity 10000 -alias upload
+
+    # Windows
+    keytool -genkey -v -keystore $env:USERPROFILE\upload-keystore.jks `
+            -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 `
+            -alias upload
+    ```
+
+3. Create `android/key.properties`
+
+    ```bash
+    storePassword=<password>
+    keyPassword=<password>
+    keyAlias=upload
+    storeFile=../app/upload-keystore.jks
+    ```
+
+## Usage
+
+### Run
+
+```bash
+flutter run --debug --target=lib/main.dart
+flutter run --profile --target=lib/main.dart
+flutter run --release --target=lib/main.dart
+```
+
+### Build
+
+```bash
+# APK
+flutter build apk --release --target=lib/main.dart
+
+# AAB
+flutter build appbundle --release --target=lib/main.dart
+
+# IPA
+flutter build ipa --release --target=lib/main.dart --export-method=ad-hoc
+```
+
