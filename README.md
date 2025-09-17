@@ -50,8 +50,6 @@
 ### Run
 
 ```bash
-flutter run --debug --target=lib/main.dart
-flutter run --profile --target=lib/main.dart
 flutter run --release --target=lib/main.dart
 ```
 
@@ -65,6 +63,6 @@ flutter build apk --release --target=lib/main.dart
 flutter build appbundle --release --target=lib/main.dart
 
 # IPA
-flutter build ipa --release --target=lib/main.dart --export-method=ad-hoc
+flutter build ipa --release --target=lib/main.dart
 ```
 
