@@ -2,28 +2,47 @@
 
 ## Setup
 
-###	Firebase Project
+### 1. Change Package Name
 
-1. Install [Firebase CLI](https://firebase.google.com/docs/cli)
+- Install [change_app_package_name](https://pub.dev/packages/change_app_package_name) and run:
 
-2. Configure
+    ```bash
+    # Install as dev dependencies
+    flutter pub add -d change_app_package_name
+
+    # Change package name e.g. com.example.yingxin
+    flutter pub run change_app_package_name:main <name>
+    ```
+
+- Then clean the project:
+
+    ```bash
+    flutter clean
+    flutter pub get
+    ```
+
+### 2. Firebase Project
+
+- Install [Firebase CLI](https://firebase.google.com/docs/cli)
+
+- Configure
 
     ```bash
     flutterfire configure
     ```
 
-3. Move `lib/firebase_options.dart` file to `lib/core/configs/` folder
+- Move `lib/firebase_options.dart` file to `lib/core/configs/` folder
 
-### Android
+### 3. Android Config
 
-1. Add in `android/local.properties` file
+- Add in `android/local.properties` file
 
     ```bash
     flutter.minSdkVersion=23
     flutter.ndkVersion=27.0.12077973
     ```
 
-2. Create `upload-keystore.jks` and put it in `android/app/` folder
+- Create `upload-keystore.jks` and put it in `android/app/` folder
 
     ```bash
     # macOS or Linux
@@ -36,7 +55,7 @@
             -alias upload
     ```
 
-3. Create `android/key.properties`
+- Create `android/key.properties`
 
     ```bash
     storePassword=<password>
